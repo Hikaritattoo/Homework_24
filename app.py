@@ -33,7 +33,7 @@ def perform_query():
     try:
         with open(file_path, 'r') as f:
             result1 = getattr(utils, cmd_1)(f, value1)
-            result2 = getattr(utils, cmd_2)(f, value2)
+            result2 = getattr(utils, cmd_2)(result1, value2)
     except (ValueError, TypeError) as e:
         abort(400, e)
     return app.response_class(result2, content_type="text/plain")

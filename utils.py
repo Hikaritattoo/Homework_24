@@ -1,3 +1,4 @@
+import re
 from typing import Iterator, Iterable, Union, List, Set
 
 
@@ -29,4 +30,9 @@ def limit_(iterable: Iterator, number: Union[str, int]) -> List:
     if not str(number).isdigit():
         raise TypeError('Тип ввода - не число')
     return list(iterable)[:int(number)]
+
+
+def regex_(iterable: Iterator, search_str: str) -> Iterable:
+    regex = re.compile(rf'{str(search_str)}')
+    return filter(lambda x: regex.search(x), iterable)
 
