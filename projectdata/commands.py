@@ -16,7 +16,7 @@ class Commands:
     value2: Union[str, int]
 
     def __post_init__(self):
-        """Проверяет поля и объединяет команды с '_'"""
+        """Проверяет поля и охватывает команды с '_'"""
         if self.cmd1 not in COMMANDS:
             raise ValidationError(f'Команда cmd1 ({self.cmd1}) некорректна. '
                                   f'Необходимо ввести {", ".join(COMMANDS)}')
