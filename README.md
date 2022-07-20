@@ -8,4 +8,4 @@
 
 Пример для проверки:
 
-http://127.0.0.1:5000/perform_query/?cmd_1=filter&value1=GET&cmd_2=limit&value2=2&file_name=apache_logs.txt
+http://127.0.0.1:5000/perform_query/?cmd1=filter&value1=GET&cmd_2=limit&value2=2&file_name=apache_logs.txt
