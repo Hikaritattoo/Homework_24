@@ -1,6 +1,5 @@
 import os
-from flask import Flask, request
-from flask_restx import abort
+from flask import Flask, request, abort
 from marshmallow.exceptions import ValidationError
 
 from projectdata import utils
